@@ -65,7 +65,7 @@ def main():
         return df.iloc[1:,]
       result = tfidf_based_model(story, 11)
       st.write("========================== Queried article details ==========================")
-      st.write("Selected headline :" +selectedheadline)
+      st.write("Selected headline : " +selectedheadline)
       st.write("=========================== Recommended articles :  =========================")
       st.write(result)
 if __name__ == '__main__':
