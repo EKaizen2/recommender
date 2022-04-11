@@ -12,7 +12,7 @@ from sklearn.linear_model import LinearRegression
 
 
 # loading the trained model
-tfidf_headline_features = pickle.load(open('Pickle.pkl','rb'))
+tfidf_headline_features = pickle.load(open('PickleModel.pkl','rb'))
 
 
 def main():
