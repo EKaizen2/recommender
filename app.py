@@ -18,8 +18,8 @@ tfidf_headline_features = pickle.load(open('PickleModel.pkl','rb'))
 def main():
     # front end elements of the web page
     html_temp = """ 
-    <div style ="background-color:#FF0000;padding:10px;font-weight:10px"> 
-    <h1 style ="color:white;>Ephraim Adongo New Article Recommender</h1> 
+    <div style ="background-color:#002E6D;padding:20px;font-weight:15px"> 
+    <h1 style ="color:white;text-align:center;">Ephraim Adongo New Article Recommender</h1> 
     </div> 
     """
 
@@ -29,7 +29,7 @@ def main():
 #     uploaded_file = st.file_uploader("Choose a XLSX file", type="xlsx")
 
     story = st.selectbox(
-         'Select your chest pain type here: ',
+         'Select one article to get a recommendation of similar articles: ',
          ('‘The Voice’ Blind Auditions Make History With First Trans Contestant', '‘RuPaul’s Drag Race All Stars 3’ Episode 7 Recap: We Can Never Go Back To Before', 'Would Dr. King Take A Knee? 6 Ways His Radical Spirit Lives On Today', 'Why Would DeVos Cancel A Student Loan Rule That Works?', 'Veterans Affairs Secretary David Shulkin Ousted From White House'))
     if story == '‘The Voice’ Blind Auditions Make History With First Trans Contestant':
         story = 1
