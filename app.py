@@ -28,6 +28,20 @@ def main():
     default_value_goes_here = ""
 #     uploaded_file = st.file_uploader("Choose a XLSX file", type="xlsx")
 
+    story = st.selectbox(
+         'Select your chest pain type here: ',
+         ('‘The Voice’ Blind Auditions Make History With First Trans Contestant', '‘RuPaul’s Drag Race All Stars 3’ Episode 7 Recap: We Can Never Go Back To Before', 'Would Dr. King Take A Knee? 6 Ways His Radical Spirit Lives On Today', 'Why Would DeVos Cancel A Student Loan Rule That Works?', 'Veterans Affairs Secretary David Shulkin Ousted From White House'))
+    if story == '‘The Voice’ Blind Auditions Make History With First Trans Contestant':
+        story = 1
+    elif story == "‘RuPaul’s Drag Race All Stars 3’ Episode 7 Recap: We Can Never Go Back To Before":
+        story = 10
+    elif story == "Would Dr. King Take A Knee? 6 Ways His Radical Spirit Lives On Today":
+        story = 100
+    elif story == "Why Would DeVos Cancel A Student Loan Rule That Works?":
+        story = 200
+    else:
+        story = 500
+
     global dataframe
 #     if uploaded_file:
     df = pd.read_excel('news_articles.xlsx')
@@ -48,7 +62,7 @@ def main():
 
         #return df.iloc[1:,1]
         return df.iloc[1:,]
-      result = tfidf_based_model(300, 11)
+      result = tfidf_based_model(story, 11)
       st.write(result)
 
 if __name__ == '__main__':
