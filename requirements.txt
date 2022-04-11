@@ -5,3 +5,4 @@ sklearn~=0.0
 scikit-learn~=0.24.1
 xlrd
 openpyxl
+click==8.0.4
